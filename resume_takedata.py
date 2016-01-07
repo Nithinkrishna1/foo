@@ -1,13 +1,11 @@
 import resume_writedata
 
 class Reader(object):
-	def read_data(self):
-		name=raw_input("Name:\n")
-		age = raw_input("Age:\n")
-		qualification = raw_input("qualification\n")
+	def read_data_andcall(self):
+		name,age,qualification=raw_input("Enter name age qulaification space separated\n").split()
 		individual_detail =[name,age,qualification]
 		resume_writedata.Writer().write_data(individual_detail)
 
 	
-new = Reader_writer()
-new.read_data()
+new = Reader()
+new.read_data_andcall()
