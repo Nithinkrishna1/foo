@@ -1,4 +1,5 @@
 import resume_writedata
+import write_csv
 
 class Reader(object):
 	def user_detail(self):
@@ -9,6 +10,8 @@ class Reader(object):
 			data = raw_input()
 			user_data.append(data)
 		resume_writedata.Writer().write_data(user_data)
+		write_csv.CreateCsv().csv_create(individual_detail,user_data)
+
 
 	
 new = Reader()
