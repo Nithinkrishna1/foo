@@ -1,6 +1,6 @@
 import resume_writedata
 
-class Reader_writer(object):
+class Reader(object):
 	def read_data(self):
 		name=raw_input("Name:\n")
 		age = raw_input("Age:\n")
