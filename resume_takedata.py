@@ -1,12 +1,15 @@
-import write
+import resume_writedata
 
-class Reader_writer(object):
-	def read_data(self):
-		name=raw_input("Name:\n")
-		age = int(raw_input("Age:\n"))
-		qualification = raw_input("qualification\n")
-		write.Writer().write_data(name,age,qualification)
+class Reader(object):
+	def user_detail(self):
+		user_data=[]
+		individual_detail =['name','age','qualification']
+		for title in individual_detail:
+			print "enter {}".format(title)
+			data = raw_input()
+			user_data.append(data)
+		resume_writedata.Writer().write_data(user_data)
+
 	
-
-new = Reader_writer()
-new.read_data()
+new = Reader()
+new.user_detail()

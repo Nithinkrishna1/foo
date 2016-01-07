@@ -1,8 +1,7 @@
 class Writer(object):
-	def write_data(self,name,age,qualification):
+	def write_data(self,individual_detail):
 		filehandler = open("resume.txt",'a')
-		filehandler.write(name)
-		filehandler.write(" ")
-		filehandler.write(str(age))
-		filehandler.write(" ")
-		filehandler.write(qualification)
+		for item in individual_detail:
+			filehandler.write("{}\t".format(item))
+		filehandler.write("\n")
+		filehandler.close()
