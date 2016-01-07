@@ -3,4 +3,5 @@ class Writer(object):
 		filehandler = open("resume.txt",'a')
 		for item in individual_detail:
 			filehandler.write("{}\t".format(item))
-		
+		filehandler.write("\n")
+		filehandler.close()
